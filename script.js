@@ -94,6 +94,7 @@
         "Cuéntame sobre tu proyecto y encontremos el servicio adecuado para llevar tu identidad al siguiente nivel.",
       "finalcta.btn1": "Completar brief",
       "finalcta.btn2": "Hablar por WhatsApp",
+      "finalcta.sitelink.text": "¿Quieres conocer más servicios? Ve a nuestro sitio web",
       "footer.tag": "Diseño que impulsa tus ideas.",
       "modal.cta": "Solicitar este servicio",
       "modal.viewpdf": "Ver PDF"
@@ -165,13 +166,14 @@
       "finalcta.text": "Tell me about your project and let's find the right service to take your brand to the next level.",
       "finalcta.btn1": "Start your brief",
       "finalcta.btn2": "Chat on WhatsApp",
+      "finalcta.sitelink.text": "Want to see more services? Visit our website",
       "footer.tag": "Design that drives your ideas.",
       "modal.cta": "Request this service",
       "modal.viewpdf": "View PDF"
     }
   };
 
-  var state = { lang: "es", filter: "all" };
+  var state = { lang: "en", filter: "all", pricingTab: "logos" };
   function t(key) {
     return (UI[state.lang] && UI[state.lang][key]) || key;
   }
@@ -877,6 +879,16 @@
     );
   }
 
+  function setPricingTab(tab) {
+    state.pricingTab = tab;
+    document.querySelectorAll(".pricing-tab").forEach(function (btn) {
+      btn.classList.toggle("active", btn.getAttribute("data-pricing-tab") === tab);
+    });
+    document.querySelectorAll(".pricing-panel").forEach(function (panel) {
+      panel.classList.toggle("active", panel.getAttribute("data-pricing-panel") === tab);
+    });
+  }
+
   function renderPricing() {
     var logoWrap = document.getElementById("pricingLogos");
     logoWrap.innerHTML = "";
@@ -1316,6 +1328,13 @@
     document.querySelectorAll(".service-card[data-modal]").forEach(function (card) {
       card.addEventListener("click", function () {
         openServiceModal(card.getAttribute("data-modal"));
+      });
+    });
+
+    // Pricing tabs
+    document.querySelectorAll(".pricing-tab").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        setPricingTab(btn.getAttribute("data-pricing-tab"));
       });
     });
 

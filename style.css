@@ -288,6 +288,19 @@ ul{ margin:0; padding:0; list-style:none; }
 /* =====================================================
    PRICING
 ===================================================== */
+.pricing-tabs{
+  display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-bottom:40px;
+}
+.pricing-tab{
+  background:#fff; border:1.5px solid var(--line); color:var(--ink-soft); font-weight:600; font-size:.86rem;
+  padding:10px 20px; border-radius:100px; transition:all .18s var(--ease);
+}
+.pricing-tab:hover{ border-color:var(--purple); color:var(--purple); }
+.pricing-tab.active{ background:var(--purple-deep); border-color:var(--purple-deep); color:#fff; }
+
+.pricing-panel{ display:none; }
+.pricing-panel.active{ display:block; animation:stepIn .3s var(--ease); }
+
 .pricing-group-title{ font-size:1.2rem; text-align:center; margin:56px 0 24px; }
 .pricing-group-title:first-of-type{ margin-top:0; }
 .pricing-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-bottom:12px; }
@@ -420,6 +433,12 @@ ul{ margin:0; padding:0; list-style:none; }
 .final-cta h2{ color:#fff; font-size:clamp(1.8rem,3.6vw,2.6rem); max-width:22ch; margin:0 auto 16px; }
 .final-cta p{ color:rgba(255,255,255,.82); max-width:52ch; margin:0 auto 32px; }
 .final-cta .hero-actions{ justify-content:center; }
+.final-cta-sitelink{
+  display:inline-flex; align-items:center; gap:6px; margin-top:26px; font-size:.86rem; font-weight:600;
+  color:rgba(255,255,255,.85); border-bottom:1px solid rgba(255,255,255,.4); padding-bottom:2px;
+  transition:color .18s ease, border-color .18s ease;
+}
+.final-cta-sitelink:hover{ color:#fff; border-color:#fff; }
 
 /* =====================================================
    FOOTER
@@ -477,44 +496,26 @@ ul{ margin:0; padding:0; list-style:none; }
 .reveal.in-view{ opacity:1; transform:translateY(0); }
 
 /* =====================================================
-   FULL SERVICES CATALOG — image cards (matches services.html)
+   BRAND IDENTITY CATALOG BANNER (compact, inside portfolio section)
 ===================================================== */
-.catalog-grid{
-  display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:36px;
+.catalog-banner{
+  display:flex; align-items:center; gap:20px; background:#fff; border:1.5px solid var(--line);
+  border-radius:var(--radius-md); padding:14px; margin-bottom:40px; text-decoration:none;
+  box-shadow:var(--shadow-card); transition:transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s ease;
 }
-.catalog-grid-single{
-  grid-template-columns:1fr; max-width:420px; margin-left:auto; margin-right:auto;
+.catalog-banner:hover{ transform:translateY(-3px); box-shadow:var(--shadow-hover); border-color:#DBCBF0; }
+.catalog-banner img{
+  width:76px; height:76px; border-radius:var(--radius-sm); object-fit:cover; flex-shrink:0;
 }
-@media (max-width:900px){ .catalog-grid{ grid-template-columns:repeat(2,1fr); } }
-@media (max-width:600px){ .catalog-grid{ grid-template-columns:1fr; } }
-.catalog-card{
-  display:block; position:relative; border-radius:var(--radius-md); overflow:hidden;
-  text-decoration:none; aspect-ratio:4/3; box-shadow:var(--shadow-card);
-  transition:box-shadow .25s var(--ease);
+.catalog-banner-copy{ display:flex; flex-direction:column; gap:4px; flex:1; min-width:0; }
+.catalog-banner-copy strong{ font-family:var(--font-display); color:var(--purple-deep); font-size:1.02rem; }
+.catalog-banner-copy span{ font-size:.86rem; color:var(--ink-soft); }
+.catalog-banner-arrow{
+  width:36px; height:36px; border-radius:50%; background:var(--purple-soft); color:var(--purple);
+  display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:background .2s ease, color .2s ease;
 }
-.catalog-card:hover{ box-shadow:var(--shadow-hover); }
-.catalog-card img{
-  width:100%; height:100%; object-fit:cover; transition:transform .35s var(--ease);
+.catalog-banner:hover .catalog-banner-arrow{ background:var(--purple); color:#fff; }
+@media (max-width:600px){
+  .catalog-banner{ flex-wrap:wrap; }
+  .catalog-banner-copy span{ display:none; }
 }
-.catalog-card:hover img{ transform:scale(1.06); }
-.catalog-card::after{
-  content:""; position:absolute; inset:0;
-  background:linear-gradient(to top, rgba(36,26,48,.72) 0%, rgba(36,26,48,.15) 45%, rgba(36,26,48,0) 65%);
-}
-.catalog-label{
-  position:absolute; left:0; right:0; bottom:0; padding:1rem 1.1rem; z-index:2;
-  color:#fff; font-weight:700; font-size:.95rem; line-height:1.3;
-}
-.catalog-arrow{
-  position:absolute; top:.8rem; right:.8rem; width:30px; height:30px; border-radius:50%;
-  background:rgba(255,255,255,.92); color:var(--purple); display:flex; align-items:center; justify-content:center;
-  z-index:2; opacity:0; transform:translateY(-4px); transition:opacity .25s ease, transform .25s ease;
-}
-.catalog-card:hover .catalog-arrow{ opacity:1; transform:translateY(0); }
-.catalog-cta{
-  display:inline-flex; align-items:center; gap:5px; margin-top:.5rem; font-size:.72rem; font-weight:700;
-  letter-spacing:.02em; color:#fff; background:rgba(255,255,255,.2); border:1px solid rgba(255,255,255,.55);
-  padding:.3rem .8rem; border-radius:20px; backdrop-filter:blur(2px);
-  transition:background .2s ease, transform .2s ease;
-}
-.catalog-card:hover .catalog-cta{ background:#fff; color:var(--purple); }
