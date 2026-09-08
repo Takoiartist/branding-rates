@@ -363,7 +363,7 @@
         "https://docs.google.com/viewer?url=https%3A%2F%2Fraw.githubusercontent.com%2FTakoiartist%2Ftakoi-artist%2F4454b18c4d3d0c1a00aee9e232d92ef0aee4220d%2FIngrid%2520Rivas%2520BrandBook%25202025.pdf&embedded=true"
     },
     {
-      img: "https://raw.githubusercontent.com/Takoiartist/takoi-artist/main/manual%20de%20marca.webp",
+      img: "https://raw.githubusercontent.com/Takoiartist/branding-rates/d763671fdf987ec7e0cd028447f50b193b7a1b8d/2026-09-08%2018_33_40-%232.png",
       name: { es: "Dali Brand Identity 2023 — Manual", en: "Dali Brand Identity 2023 — Manual" },
       cat: { es: "Manual de marca", en: "Brand manual" },
       desc: {
