@@ -349,7 +349,18 @@
         en: "Brandbook with editable logos and application guidelines developed for Punto Pet."
       },
       pdf:
-        "https://docs.google.com/viewer?url=https%3A%2F%2Fraw.githubusercontent.com%2FTakoiartist%2Ftakoi-artist%2Fa81043f0e833ef8e213626830310b6116fd72b17%2FPUNTO%2520PET%2520EDITABLE%2520LOGOS.pdf&embedded=true"
+        "https://docs.google.com/viewer?url=https%3A%2F%2Fraw.githubusercontent.com%2FTakoiartist%2Ftakoi-artist%2F4454b18c4d3d0c1a00aee9e232d92ef0aee4220d%2FPuntoPet%2520BrandBook%25202025.pdf&embedded=true"
+    },
+    {
+      img: "https://raw.githubusercontent.com/Takoiartist/takoi-artist/5ccb3576b72d7d9c295ea64ab4a34e87fc792454/manual%20de%20marca.webp",
+      name: { es: "Ingrid Rivas — Brandbook", en: "Ingrid Rivas — Brandbook" },
+      cat: { es: "Brandbook", en: "Brandbook" },
+      desc: {
+        es: "Brandbook con el sistema de marca y guías de aplicación desarrolladas para Ingrid Rivas.",
+        en: "Brandbook with the brand system and application guidelines developed for Ingrid Rivas."
+      },
+      pdf:
+        "https://docs.google.com/viewer?url=https%3A%2F%2Fraw.githubusercontent.com%2FTakoiartist%2Ftakoi-artist%2F4454b18c4d3d0c1a00aee9e232d92ef0aee4220d%2FIngrid%2520Rivas%2520BrandBook%25202025.pdf&embedded=true"
     },
     {
       img: "https://raw.githubusercontent.com/Takoiartist/takoi-artist/main/manual%20de%20marca.webp",
@@ -1359,6 +1370,9 @@
       });
     });
     document.getElementById("modalClose").addEventListener("click", function () {
+      closeOverlay("serviceModalOverlay");
+    });
+    document.getElementById("modalCta").addEventListener("click", function () {
       closeOverlay("serviceModalOverlay");
     });
     document.getElementById("projectModalClose").addEventListener("click", function () {
