@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-lang="es">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,6 @@
 
     <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
       <a href="#services" data-i18n="nav.services">Servicios</a>
-      <a href="#catalog" data-i18n="nav.catalog">Brand Identity</a>
       <a href="#portfolio" data-i18n="nav.portfolio">Portafolio</a>
       <a href="#pricing" data-i18n="nav.pricing">Paquetes</a>
       <a href="#brief" data-i18n="nav.brief">Brief</a>
@@ -35,10 +34,10 @@
     </nav>
 
     <div class="header-actions">
-      <div class="lang-switch" role="group" aria-label="Selector de idioma">
-        <button type="button" class="lang-btn active" data-lang-btn="es">ES</button>
+      <div class="lang-switch" role="group" aria-label="Language selector">
+        <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
         <span aria-hidden="true">|</span>
-        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn active" data-lang-btn="en">EN</button>
       </div>
       <div class="header-social">
         <a href="https://instagram.com/Takoiartist" target="_blank" rel="noopener" title="Instagram" class="social-icon-header"><i class="bi bi-instagram"></i></a>
@@ -62,7 +61,6 @@
   <!-- Mobile nav -->
   <div class="mobile-nav" id="mobileNav">
     <a href="#services" data-i18n="nav.services">Servicios</a>
-    <a href="#catalog" data-i18n="nav.catalog">Brand Identity</a>
     <a href="#portfolio" data-i18n="nav.portfolio">Portafolio</a>
     <a href="#pricing" data-i18n="nav.pricing">Paquetes</a>
     <a href="#brief" data-i18n="nav.brief">Brief</a>
@@ -153,29 +151,22 @@
   </div>
 </section>
 
-<!-- ================= BRAND IDENTITY CATALOG (image card) ================= -->
-<section class="section section-soft" id="catalog">
-  <div class="container">
-    <h2 class="section-title" data-i18n="catalog.title">Catálogo de Brand Identity</h2>
-    <p class="section-lead" data-i18n="catalog.text">Sistemas de identidad de marca organizados por temática, con ejemplos reales de trabajo.</p>
-
-    <div class="catalog-grid catalog-grid-single">
-
-      <a href="https://takoiartist.github.io/takoi-artist/service-brand-identity.html" target="_blank" rel="noopener" class="catalog-card">
-        <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/main/manual%20de%20marca.webp" alt="Brand Identity">
-        <span class="catalog-arrow">
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-        </span>
-        <span class="catalog-label">Brand Identity<br><span class="catalog-cta">Ver más →</span></span>
-      </a>
-
-    </div>
-  </div>
-</section>
+<!-- ================= PORTFOLIO (+ Brand Identity catalog banner) ================= -->
 <section class="section section-soft" id="portfolio">
   <div class="container">
     <h2 class="section-title" data-i18n="logos.title">Logos seleccionados</h2>
     <p class="section-lead" data-i18n="logos.text">Una selección de identidades y logos desarrollados para diferentes tipos de marcas y proyectos.</p>
+
+    <a href="https://takoiartist.github.io/takoi-artist/service-brand-identity.html" target="_blank" rel="noopener" class="catalog-banner" id="catalog">
+      <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/main/manual%20de%20marca.webp" alt="Brand Identity catalog">
+      <span class="catalog-banner-copy">
+        <strong data-i18n="catalog.title">Catálogo de Brand Identity</strong>
+        <span data-i18n="catalog.text">Sistemas de identidad de marca organizados por temática, con ejemplos reales de trabajo.</span>
+      </span>
+      <span class="catalog-banner-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </span>
+    </a>
 
     <div class="filter-row" role="tablist" aria-label="Filtrar portafolio">
       <button class="filter-chip active" data-filter="all" data-i18n="logos.filter.all">Todos</button>
@@ -208,17 +199,25 @@
     <h2 class="section-title" data-i18n="pricing.title">Nuestros paquetes</h2>
     <p class="section-lead" data-i18n="pricing.text">Precios en USD para clientes de Florida y Estados Unidos. Equivalente aproximado en COP como referencia.</p>
 
-    <h3 class="pricing-group-title" data-i18n="pricing.group.logos">Diseño de logo</h3>
-    <div class="pricing-grid" id="pricingLogos"></div>
+    <div class="pricing-tabs" id="pricingTabs" role="tablist" aria-label="Pricing categories">
+      <button type="button" class="pricing-tab active" data-pricing-tab="logos" data-i18n="pricing.group.logos">Diseño de logo</button>
+      <button type="button" class="pricing-tab" data-pricing-tab="guidelines" data-i18n="pricing.group.guidelines">Manuales de marca</button>
+      <button type="button" class="pricing-tab" data-pricing-tab="identity" data-i18n="pricing.group.identity">Paquetes de identidad de marca</button>
+      <button type="button" class="pricing-tab" data-pricing-tab="social" data-i18n="pricing.group.social">Social Media Design</button>
+    </div>
 
-    <h3 class="pricing-group-title" data-i18n="pricing.group.guidelines">Manuales de marca</h3>
-    <div class="pricing-grid" id="pricingGuidelines"></div>
-
-    <h3 class="pricing-group-title" data-i18n="pricing.group.identity">Paquetes de identidad de marca</h3>
-    <div class="pricing-grid" id="pricingIdentity"></div>
-
-    <h3 class="pricing-group-title" data-i18n="pricing.group.social">Social Media Design</h3>
-    <div class="social-pricing-grid" id="pricingSocial"></div>
+    <div class="pricing-panel active" data-pricing-panel="logos">
+      <div class="pricing-grid" id="pricingLogos"></div>
+    </div>
+    <div class="pricing-panel" data-pricing-panel="guidelines">
+      <div class="pricing-grid" id="pricingGuidelines"></div>
+    </div>
+    <div class="pricing-panel" data-pricing-panel="identity">
+      <div class="pricing-grid" id="pricingIdentity"></div>
+    </div>
+    <div class="pricing-panel" data-pricing-panel="social">
+      <div class="social-pricing-grid" id="pricingSocial"></div>
+    </div>
 
     <p class="payment-terms" data-i18n="pricing.terms">50% de anticipo para iniciar el proyecto. 50% restante al finalizar y antes de la entrega de los archivos editables, cuando estén incluidos en el paquete.</p>
     <p class="payment-note" data-i18n="pricing.note">Cada servicio incluye el número de rondas de modificaciones especificado en su descripción. Modificaciones adicionales o cambios sustanciales podrán generar un costo adicional.</p>
@@ -285,6 +284,10 @@
       <a href="#brief" class="btn btn-primary-inverse" data-i18n="finalcta.btn1">Completar brief</a>
       <a href="https://wa.me/573145641237" target="_blank" rel="noopener" class="btn btn-outline-inverse" data-i18n="finalcta.btn2">Hablar por WhatsApp</a>
     </div>
+    <a href="https://takoiartist.github.io/takoi-artist/" target="_blank" rel="noopener" class="final-cta-sitelink">
+      <span data-i18n="finalcta.sitelink.text">Want to see more services? Visit our website</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="19" x2="19" y2="5"></line><polyline points="9 5 19 5 19 15"></polyline></svg>
+    </a>
   </div>
 </section>
 
@@ -299,7 +302,6 @@
     </div>
     <div class="footer-links">
       <a href="#services" data-i18n="nav.services">Servicios</a>
-      <a href="#catalog" data-i18n="nav.catalog">Brand Identity</a>
       <a href="#portfolio" data-i18n="nav.portfolio">Portafolio</a>
       <a href="#brief" data-i18n="nav.brief">Brief</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
