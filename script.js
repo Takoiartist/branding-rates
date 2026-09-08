@@ -341,7 +341,7 @@
       pdf: "https://drive.google.com/file/d/17CFDoviwSaygjhMp0ltyw1CwrUP4oEnt/view?usp=sharing"
     },
     {
-      img: "https://raw.githubusercontent.com/Takoiartist/takoi-artist/main/_PUNTOPET%20LOGO%2002.png",
+      img: "https://raw.githubusercontent.com/Takoiartist/branding-rates/89b92b870545a8516227bca05f2f937518dd5ca7/PuntoPet%20BrandBook%202025.webp",
       name: { es: "Punto Pet — Brandbook", en: "Punto Pet — Brandbook" },
       cat: { es: "Brandbook", en: "Brandbook" },
       desc: {
@@ -352,7 +352,7 @@
         "https://docs.google.com/viewer?url=https%3A%2F%2Fraw.githubusercontent.com%2FTakoiartist%2Ftakoi-artist%2F4454b18c4d3d0c1a00aee9e232d92ef0aee4220d%2FPuntoPet%2520BrandBook%25202025.pdf&embedded=true"
     },
     {
-      img: "https://raw.githubusercontent.com/Takoiartist/takoi-artist/5ccb3576b72d7d9c295ea64ab4a34e87fc792454/manual%20de%20marca.webp",
+      img: "https://raw.githubusercontent.com/Takoiartist/branding-rates/89b92b870545a8516227bca05f2f937518dd5ca7/Ingrid%20Rivas%20BrandBook%202025.webp",
       name: { es: "Ingrid Rivas — Brandbook", en: "Ingrid Rivas — Brandbook" },
       cat: { es: "Brandbook", en: "Brandbook" },
       desc: {
